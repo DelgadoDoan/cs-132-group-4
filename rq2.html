@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RQ2: Relationship with GVA</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- optional -->
+</head>
+<body>
+
+  <header>
+    <h1>RQ2: Relationship with GVA</h1>
+    <p>Correlation tests (Pearson) to explore association between household education spending and GVA (Gross Value Added).</p>
+  </header>
+
+  <main style="text-align:center;">
+    <!-- Main correlation/time series plot -->
+    <img src="plots/nutshell.png" alt="Education vs GVA Plot" style="max-width:90%; height:auto; margin-top:20px;">
+    
+    <section style="max-width:800px; margin:auto; padding-top:20px; text-align:justify;">
+      <h2>Interpretation</h2>
+      <p>
+        The graph above compares the <strong>Household Final Consumption Expenditure (HFCE) in education</strong> with
+        the <strong>Gross Value Added (GVA)</strong> of the Philippines from 2000 to 2025. The two series generally
+        move in tandem, showing a strong positive correlation between educational spending and overall economic growth.
+      </p>
+      <p>
+        Periods of economic expansion, reflected by increasing GVA, correspond to growth in household spending on education,
+        indicating that households tend to invest more in learning when incomes are higher. Conversely, dips during crises
+        or slowdowns reflect how vulnerable education budgets are to macroeconomic conditions.
+      </p>
+      <p>
+        This relationship underscores how education expenditure can both drive and respond to economic development,
+        highlighting the interdependence between household welfare and national productivity.
+      </p>
+    </section>
+
+    <!-- Added post-log histogram plot -->
+    <img src="plots/postlog_dist.png" alt="Post-log HFCE and GVA Distributions" style="max-width:90%; height:auto; margin-top:40px;">
+    
+    <section style="max-width:800px; margin:auto; padding-top:20px; text-align:justify;">
+      <h2>Data Transformation and Normality</h2>
+      <p>
+        Before performing correlation analysis, both variables—HFCE and GVA—were log-transformed to stabilize variance
+        and normalize their distributions. The histograms above display the <strong>post-log distributions</strong> for each variable.
+      </p>
+      <p>
+        Log transformation reduces skewness and mitigates the impact of outliers, ensuring that the data better meet
+        the assumptions of the Pearson correlation test. After transformation, both HFCE and GVA approximate a normal
+        distribution, validating the statistical assumptions necessary for accurate correlation analysis.
+      </p>
+    </section>
+
+    <!-- Added scatterplots for correlation analysis -->
+<img src="plots/scatter.png" alt="HFCE vs GVA Raw and Post-Log" style="max-width:90%; height:auto; margin-top:40px;">
+
+<section style="max-width:800px; margin:auto; padding-top:20px; text-align:justify;">
+  <h2>Correlation Analysis</h2>
+  <p>
+    The scatterplots above illustrate the relationship between <strong>HFCE in education</strong> and
+    <strong>GVA</strong> in both their original (left) and log-transformed (right) forms. In both cases,
+    the points form a clear upward trend, indicating a strong positive correlation between the two variables.
+  </p>
+  <p>
+    The log-transformed plot further emphasizes linearity and homoscedasticity—key assumptions of Pearson’s
+    correlation test. This confirms that as national productivity (GVA) increases, household expenditure on
+    education also rises proportionally, reinforcing the significant association between economic performance
+    and educational investment.
+  </p>
+</section>
+
+
+    <p style="margin-top:2em;">
+      <a href="index.html">← Back to Proposed Methodology</a>
+    </p>
+  </main>
+
+</body>
+</html>

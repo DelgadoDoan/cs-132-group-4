@@ -4,51 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RQ1: Spending Patterns</title>
-  <link rel="stylesheet" href="css/style.css"> <!-- optional if you already have a style.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: "Segoe UI", Arial; background: #f9fafc; color: #333; }
+    header {
+      background: linear-gradient(135deg, #3159a6, #4e89d4);
+      color: white;
+      padding: 3em 1em;
+      text-align: center;
+      border-bottom: 5px solid #224d9c;
+    }
+    h1 { font-size: 2.2em; margin-bottom: 0.3em; }
+    h2 { color: #224d9c; margin-top: 1.5em; }
+    main { text-align: center; padding: 2em; }
+    img {
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    section {
+      background: white;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-top: 30px;
+      text-align: justify;
+    }
+    a { color: #224d9c; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
 </head>
-<body>
 
+<body>
   <header>
     <h1>RQ1: Spending Patterns</h1>
-    <p>Time-series and comparative trend analysis across education, food, housing, and healthcare (2000–2025).</p>
+    <p>Time-series and comparative trend analysis across education, food, housing, and healthcare (2000-2025).</p>
   </header>
 
   <main style="text-align:center;">
-    <!-- Primary spending patterns plot -->
-    <img src="plots/dist.png" alt="Spending Patterns Plot" style="max-width:90%; height:auto; margin-top:20px;">
+    <!-- Distribution plots -->
+    <img src="plots/dist.png" alt="Distribution of HFCE and GVA" style="max-width:90%; height:auto; margin-top:20px;">
+
     <section style="max-width:800px; margin:auto; padding-top:20px; text-align:justify;">
-      <h2>General Trend Overview</h2>
+      <h2>Distribution of Spending and Economic Output</h2>
       <p>
-        The plot above illustrates the evolution of household spending patterns over time. 
-        The data reveal consistent increases in education and healthcare expenditures,
-        suggesting a long-term shift toward human capital investment and essential household services.
+        The first figure illustrates the distributions of <strong>Household Final Consumption Expenditure (HFCE) in education</strong> 
+        and <strong>Gross Value Added (GVA)</strong>. Both distributions are <strong>positively skewed</strong>, meaning most values cluster 
+        at lower spending levels, with fewer years recording higher expenditures.
       </p>
       <p>
-        Spending on food, housing, and health continues to rise steadily, reflecting both inflationary pressures
-        and changing consumption priorities.
+        For <strong>HFCE in education</strong>, the majority of spending values fall between <strong>₱75,000 million and ₱125,000 million</strong>, 
+        with a gradual decline in frequency as spending exceeds ₱150,000 million. This indicates that household education spending has 
+        historically been concentrated at modest levels but has shown consistent growth in later years.
+      </p>
+      <p>
+        The <strong>GVA distribution</strong> follows a similar pattern, with most data points between <strong>₱100,000 million and ₱150,000 million</strong>. 
+        The tail toward higher values (up to ₱275,000 million) suggests substantial economic expansion in the education sector 
+        and related industries over time.
+      </p>
+      <p>
+        Together, these distributions imply that while education expenditure and value added have steadily grown, the increases 
+        are uneven — with significant acceleration occurring only in the most recent decade.
       </p>
     </section>
 
-    <!-- New multi-category HFCE plot -->
+    <!-- Multi-category HFCE plot -->
     <img src="plots/tsa.png" alt="Philippines Quarterly HFCE by Category" style="max-width:90%; height:auto; margin-top:40px;">
 
-    <section style="max-width:800px; margin:auto; padding-top:20px; text-align:justify;">
-      <h2>Category-Level Analysis</h2>
+    <section>
+      <h2>Category-Level Time Series Analysis</h2>
       <p>
-        The chart above compares quarterly <strong>Household Final Consumption Expenditure (HFCE)</strong> across
-        multiple spending categories in the Philippines from 2000 to 2025. Each colored line represents a
-        specific sector such as education, health, housing, food, and transport.
+        The second figure presents quarterly <strong>HFCE data from 2000 to 2025</strong> across key consumption categories. 
+        The long-term trend reflects consistent economic growth, increasing household spending capacity, 
+        and evolving consumption priorities over time.
       </p>
       <p>
-        Among all sectors, <strong>Food and non-alcoholic beverages</strong> stands out as the fastest-growing category,
-        surpassing others by a wide margin. This pattern highlights a steady increase in household investment
-        toward long-term productivity and skill development. Meanwhile, essentials such as food, housing, and
-        healthcare exhibit moderate but stable growth, showing resilience even during economic disruptions.
+        The category <strong>Food and non-alcoholic beverages</strong> remains the dominant spending group, 
+        rising from approximately <strong>₱450 billion in 2000</strong> to over <strong>₱1.6 trillion by 2025</strong>. 
+        This steady climb captures both population growth and inflationary effects, maintaining food as the 
+        foundation of Filipino household budgets.
       </p>
       <p>
-        The synchronized upward trends across most categories indicate broad-based economic expansion
-        and improved household welfare over the study period. However, sharper fluctuations around 2020
-        suggest the potential impacts of large-scale crises such as the COVID-19 pandemic.
+        <strong>Education</strong> follows a more moderate but stable trajectory, increasing from around 
+        <strong>₱70 billion in 2000</strong> to nearly <strong>₱230 billion by 2025</strong>. 
+        Notably, slight dips around <strong>2013</strong> (Typhoon Yolanda) and <strong>2020</strong> (COVID-19 pandemic) 
+        reflect temporary spending disruptions before recovery resumed, showing the sector's resilience.
+      </p>
+      <p>
+        <strong>Health expenditures</strong> also exhibit strong upward growth, climbing from under 
+        <strong>₱100 billion in 2000</strong> to around <strong>₱300 billion by 2025</strong>, 
+        underscoring increasing household attention to medical needs, preventive care, and aging demographics.
+      </p>
+      <p>
+        Other essential sectors — such as <strong>housing, water, and electricity</strong> — display 
+        consistent yet moderate increases, aligning with urbanization trends and infrastructure expansion.
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Findings for RQ1</h2>
+      <p><em>[RQ1]</em> How have household expenditures on education, relative to other major household spending categories, changed from 2000 to 2025?</p>
+      <ul>
+        <li>
+          <strong>Education expenditure</strong> rose significantly from approximately <strong>₱70 billion in 2000</strong> 
+          to nearly <strong>₱250 billion by 2025</strong>—an increase of more than <strong>250%</strong>. 
+          This growth outpaced that of most other household spending categories, indicating a long-term shift toward 
+          prioritizing human capital and educational attainment.
+        </li>
+        <li>
+          While <strong>food and housing</strong> remain the largest components of total household consumption, 
+          their proportional share has steadily declined. In contrast, <strong>education, health, and communication</strong> 
+          expenditures have grown faster, reflecting an expanding service-oriented consumption pattern among Filipino households.
+        </li>
+        <li>
+          Periods of economic instability—such as <strong>Typhoon Yolanda in 2013</strong> and the <strong>COVID-19 pandemic in 2020</strong>—
+          led to short-term declines in education spending, but these were followed by strong rebounds by <strong>2022-2023</strong>. 
+          This indicates that households view education as an essential and resilient expenditure, even during crises.
+        </li>
+      </ul>
+      <p>
+        <strong>Overall:</strong> From 2000 to 2025, household spending patterns in the Philippines reveal 
+        a clear evolution toward <strong>education-driven and welfare-oriented consumption</strong>. 
+        Education has transformed from a secondary expenditure into a major and steadily growing category, 
+        suggesting that Filipino households increasingly value long-term social mobility and human capital investment 
+        over purely subsistence-based spending.
       </p>
     </section>
 

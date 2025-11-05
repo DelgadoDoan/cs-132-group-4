@@ -131,31 +131,64 @@
 				<div class="container">
 					<header>
 						<h2>Proposed methodology</h2>
-						<p>Methods we will use to answer each research question.</p>
+						<p>
+							The following section outlines the methods and analytical approaches used to address each research question. 
+							Each page presents the relevant statistical technique, its purpose, and how it contributes to understanding 
+							household expenditure behavior in the Philippines.
+						</p>
 					</header>
 					<div class="row">
+						<!-- RQ1 -->
 						<div class="col-6 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="rq1.html" class="image featured"><img src="plots/dist.png" alt="RQ1" /></a>
-								<h3><a href="rq1.html">RQ1: Spending patterns</a></h3>
-								<p>Time-series and comparative trend analysis across education, food, housing, and healthcare (2000–2025). Tools: Python (pandas, numpy, matplotlib).</p>
+							<a href="rq1.html" class="image featured"><img src="plots/dist.png" alt="RQ1" /></a>
+							<h3><a href="rq1.html">RQ1: Spending Patterns</a></h3>
+							<p>
+								This analysis employs time-series and comparative trend analysis to examine household spending across 
+								key categories such as education, food, housing, and healthcare from 2000 to 2025. 
+								The corresponding graphs visualize changes in consumption priorities over time and reveal long-term 
+								expenditure trends that reflect economic and social development. 
+								<br><br>
+								Tools: Python (<code>pandas</code>, <code>numpy</code>, <code>matplotlib</code>).
+							</p>
 							</article>
 						</div>
+
+						<!-- RQ2 -->
 						<div class="col-6 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="rq2.html" class="image featured"><img src="plots/nutshell.png" alt="RQ2" /></a>
-								<h3><a href="rq2.html">RQ2: Relationship with GVA</a></h3>
-								<p>Correlation tests (Pearson) to explore association between household education spending and GVA. Tools: Python (scipy, statsmodels).</p>
+							<a href="rq2.html" class="image featured"><img src="plots/nutshell.png" alt="RQ2" /></a>
+							<h3><a href="rq2.html">RQ2: Relationship with GVA</a></h3>
+							<p>
+								Correlation analysis using the Pearson method is applied to evaluate the relationship between household 
+								education expenditure and Gross Value Added (GVA) from 2000 to 2025. 
+								The plotted graphs display how these two indicators move over time and help determine the strength and 
+								direction of their association. Log transformations are performed to normalize distributions 
+								and improve the accuracy of statistical inference. 
+								<br><br>
+								Tools: Python (<code>scipy</code>, <code>statsmodels</code>).
+							</p>
 							</article>
 						</div>
+
+						<!-- RQ3 -->
 						<div class="col-6 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="rq3.html" class="image featured"><img src="plots/itsa.png" alt="RQ3" /></a>
-								<h3><a href="rq3.html">RQ3: Crisis impact</a></h3>
-								<p>Interrupted time series analysis to capture spending shifts during 2013 (Typhoon Yolanda) and 2020 (COVID-19). Tools: Python (statsmodels).</p>
+							<a href="rq3.html" class="image featured"><img src="plots/itsa.png" alt="RQ3" /></a>
+							<h3><a href="rq3.html">RQ3: Crisis Impact</a></h3>
+							<p>
+								Interrupted Time Series (ITS) analysis is conducted to assess how major crises such as 
+								Typhoon Yolanda (2013) and the COVID-19 pandemic (2020) affected household spending on education. 
+								The graph visualizes points of disruption in the expenditure trend and helps quantify both 
+								short-term and long-term effects. 
+								This method provides a clear understanding of how external shocks influence household economic behavior. 
+								<br><br>
+								Tools: Python (<code>statsmodels</code>).
+							</p>
 							</article>
 						</div>
 					</div>
+
 					<footer>
 						<p>Our analysis pipeline combines statistical tests, visualization, and robust checks to ensure validity.</p>
 					</footer>

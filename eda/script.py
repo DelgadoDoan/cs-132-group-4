@@ -268,19 +268,19 @@ print('|-------------------------------------------------------|')
 print('|----------------- CORRELATION ANALYSIS ----------------|')
 print('|-------------------------------------------------------|')
 
-corr,_ = pearsonr(
+corr,pval = pearsonr(
     df_educ['HFCE'], 
     df_educ['GVA'], 
 )
 
-print('Pearson\'s correlation coefficient: %.4f' % corr)
+print('Pearson\'s correlation coefficient: %.4f' % corr, '; p-value: ', pval)
 
-corr_log,_ = pearsonr(
+corr_log,pval_log = pearsonr(
     df_educ['HFCE_log'], 
     df_educ['GVA_log'], 
 )
 
-print('Pearson\'s correlation coefficient (post-log): %.4f' % corr_log)
+print('Pearson\'s correlation coefficient (post-log): %.4f' % corr_log, '; p-value: ', pval_log)
 print('')
 
 

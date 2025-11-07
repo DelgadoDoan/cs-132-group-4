@@ -33,6 +33,32 @@
   </header>
 
   <main style="text-align:center;">
+    <section>
+      <p>
+        To determine the extent to which household expenditures on education correlate 
+        with changes in gross value added (GVA), the following null and alternative hypotheses 
+        were formulated: 
+      </p style="font-style: italic;">
+      <div  style="text-align:center;">
+        <h2>Null Hypothesis</h2>
+        <p>
+          Household expenditures on education have <strong>no significant effect</strong> on the GVA in education.
+        </p>
+        <h2>Alternative Hypothesis</h2>
+        <p style="font-style: italic;">
+          Household expenditures on education have <strong>a significant effect</strong> on the GVA in education.
+        </p>
+      </div>
+      <p>
+        To test the null hypothesis, <strong>Pearson's correlation test</strong> was used 
+        with a confidence level of <strong>95%</strong>. But before doing so, each of the 
+        <strong>distributions</strong> of the HFCE and GVA data was inspected to see whether 
+        any transformations were necessary to account for <strong>skewness</strong>. This 
+        step is important given that Pearson's correlation test <strong>assumes normality</strong> 
+        of the data, which ensures the <strong>reliability</strong> of the results.
+      </p>
+    </section>
+
     <!-- Added pre-log histogram plot -->
     <img src="plots/dist.png" alt="HFCE and GVA Distributions" style="max-width:90%; height:auto; margin-top:20px;">
     <section>
@@ -49,7 +75,7 @@
     <section>
       <h2>Data Transformation and Normality</h2>
       <p>
-        Prior to correlation testing, both HFCE and GVA variables were <strong>log-transformed</strong> to address skewness and stabilize variance. 
+        Both HFCE and GVA variables were <strong>log-transformed</strong> to address skewness and stabilize variance. 
         The histograms above display the <strong>post-log distributions</strong>, which approximate normality more closely than their raw forms.
       </p>
       <p>
@@ -71,8 +97,12 @@
         A clear upward trend is visible in both plots, confirming a <strong>strong positive correlation</strong>, as GVA increases, so does household expenditure on education.
       </p>
       <p>
-        After transformation, the relationship becomes more linear and homoscedastic, indicating that the assumptions of Pearson's correlation test hold true. 
-        Statistical testing yields a <strong>correlation coefficient close to +1</strong>, reinforcing that education spending grows proportionally with national economic output.
+        After transformation, the relationship becomes more linear and homoscedastic, indicating that the 
+        assumptions of Pearson's correlation test hold true. Pearson's correlation test was assessed on both 
+        the original and the log-transformed data. Prior to transformation, the test yielded a correlation 
+        coefficient of <strong>0.8863</strong> while post-transformation, it yielded <strong>0.9203</strong>. 
+        Regardless, a <strong>correlation coefficient close to +1</strong> was obtained, reinforcing that 
+        education spending grows proportionally with national economic output.
       </p>
       <p>
         This finding suggests that economic development and educational investment reinforce one another, rising income levels enable greater access to education, which in turn supports long-term productivity growth.

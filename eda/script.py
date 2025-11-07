@@ -185,7 +185,7 @@ plt.figure(figsize=(16, 16))
 plt.subplot(2, 2, 1)
 sns.histplot(df_educ['HFCE'], kde=True, bins=20, color='#ADE8F4')
 plt.title('HFCE in Education', fontsize=16)
-plt.xlabel('HFCE in Education (in million pesos)', fontsize=12)
+plt.xlabel('HFCE in education (in million pesos)', fontsize=12)
 plt.ylabel('Count', fontsize=12)
 plt.tick_params(axis='both', which='major', labelsize=11)
 
@@ -238,9 +238,9 @@ sns.scatterplot(
     alpha=0.7,
     color=palette1[11],
 )
-plt.xlabel('HFCE (in million pesos)', fontsize=12)
+plt.xlabel('HFCE in education (in million pesos)', fontsize=12)
 plt.ylabel('GVA (in million pesos)', fontsize=12)
-plt.title('HFCE vs GVA', fontsize=16)
+plt.title('HFCE in Education vs GVA', fontsize=16)
 plt.tick_params(axis='both', which='major', labelsize=11)
 
 # post-log
@@ -254,7 +254,7 @@ sns.scatterplot(
 )
 plt.xlabel('log(HFCE)', fontsize=12)
 plt.ylabel('log(GVA)', fontsize=12)
-plt.title('HFCE vs GVA (post-log)', fontsize=16)
+plt.title('HFCE in Education vs GVA (post-log)', fontsize=16)
 plt.tick_params(axis='both', which='major', labelsize=11)
 
 # save to plot dir

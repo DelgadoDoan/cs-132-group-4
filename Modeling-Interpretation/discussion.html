@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RQ1: Spending Patterns</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: "Segoe UI", Arial; background: #f9fafc; color: #333; }
+    header {
+      background: linear-gradient(135deg, #3159a6, #4e89d4);
+      color: white;
+      padding: 3em 1em;
+      text-align: center;
+      border-bottom: 5px solid #224d9c;
+    }
+    h1 { font-size: 2.2em; margin-bottom: 0.3em; }
+    h2 { color: #224d9c; margin-top: 1.5em; }
+    main { text-align: center; padding: 2em; }
+    img {
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    section {
+      background: white;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-top: 30px;
+      text-align: justify;
+    }
+    a { color: #224d9c; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Discussion and Conclusion</h1>
+    <p>
+        This study aimed to understand how household spending on education in the Philippines changed from 2000 to 2025, 
+        how it relates to the education sector's Gross Value Added (GVA), and how major national crises affected these patterns.
+        By combining exploratory data analysis, statistical correlation, and an Interrupted Time-Series Analysis (ITSA), 
+        the project provided a clear picture of long-term spending behavior and its economic significance.
+    </p>
+  </header>
+
+  <main style="text-align:center;">
+    <section>
+        <h2>Discussion</h2>
+        <p>
+            The main goal of our research was to determine whether Filipino household spending on education has grown over time 
+            and whether this spending is meaningfully connected to the economic performance of the education sector. 
+            We also examined how major crises, including Typhoon Yolanda (2013) and the COVID-19 pandemic (2020), interrupted or reshaped these spending patterns.
+        </p>
+
+        <p>
+            The exploratory data analysis (EDA) provided the first important insights. From 2000 to 2025, household education spending 
+            increased from about <strong>₱70 billion</strong> to nearly <strong>₱250 billion</strong>, showing a long-term upward trend. 
+            The distribution plots revealed that both HFCE and GVA were positively skewed, which meant that a log transformation was necessary 
+            before applying statistical tests. This step helped normalize the data and improve the reliability of our results.
+        </p>
+
+        <p>
+            For the machine learning and statistical component, we used two analytical approaches: 
+            <strong>Pearson's correlation</strong> (a statistical ML-based measure for linear association) and 
+            <strong>OLS-based Interrupted Time-Series Analysis (ITSA)</strong>. 
+            These methods allowed us to measure both long-term relationships and crisis-specific disruptions.
+            Pearson's correlation produced strong positive results in both raw and log-transformed data, 
+            with coefficients of <strong>0.8863</strong> (raw) and <strong>0.9203</strong> (log-transformed) and extremely small p-values 
+            (<strong>3.2554e-35</strong> and <strong>1.4949e-42</strong>, respectively). 
+            These values clearly show that as household spending increases, the GVA of the education sector also increases.
+        </p>
+
+        <p>
+            The Interrupted Time-Series Analysis (ITSA) using <strong>Ordinary Least Squares (OLS)</strong> regression provided a deeper view 
+            into how national crises affected spending. Results showed a temporary decline of about 
+            <strong>₱4 billion</strong> after Typhoon Yolanda and a much larger drop of <strong>₱25-30 billion</strong> during the COVID-19 pandemic. 
+            However, both disruptions were followed by strong recoveries, with spending projected to return to approximately 
+            <strong>₱230 billion</strong> by 2025.
+        </p>
+        <h3 style="margin-top:30px;">Summary of Key Findings</h3>
+
+        <table style="width:100%; border-collapse:collapse; margin-top:10px; font-size:0.95rem;">
+
+            <thead>
+                <tr style="background-color:#f1f1f1; font-weight:bold;">
+                    <th style="border:1px solid #ddd; padding:8px;">Research Component</th>
+                    <th style="border:1px solid #ddd; padding:8px;">Model Used</th>
+                    <th style="border:1px solid #ddd; padding:8px;">Findings</th>
+                    <th style="border:1px solid #ddd; padding:8px;">How This Answers the RQs</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <!-- RQ1 -->
+                <tr>
+                    <td style="border:1px solid #ddd; padding:8px;">Trend Analysis of Household Education Spending (2000-2025)</td>
+                    <td style="border:1px solid #ddd; padding:8px;">Exploratory Data Analysis (EDA) + Multi-category HFCE Time-Series</td>
+                    <td style="border:1px solid #ddd; padding:8px;">
+                        <ul style="margin:0; padding-left:20px;">
+                            <li>Education spending increased from ~₱70B (2000) to ~₱250B (2025).</li>
+                            <li>Growth rate (~250%) outpaced several other consumption categories.</li>
+                            <li>Dips appeared in 2013 and 2020, followed by strong recoveries.</li>
+                        </ul>
+                    </td>
+                    <td style="border:1px solid #ddd; padding:8px;">
+                        <strong>Answers RQ1:</strong> Shows how household education spending evolved relative to other household consumption categories and highlights long-term prioritization of education.
+                    </td>
+                </tr>
+
+                <!-- RQ2 -->
+                <tr>
+                    <td style="border:1px solid #ddd; padding:8px;">Relationship Between HFCE in Education and GVA in Education</td>
+                    <td style="border:1px solid #ddd; padding:8px;">Pearson Correlation (pre- and post-log transformation)</td>
+                    <td style="border:1px solid #ddd; padding:8px;">
+                        <ul style="margin:0; padding-left:20px;">
+                            <li>Strong positive correlation:
+                                <ul style="margin-top:5px; padding-left:20px;">
+                                    <li>Raw: r = 0.8863, p = 3.25e-35</li>
+                                    <li>Log: r = 0.9203, p = 1.49e-42</li>
+                                </ul>
+                            </li>
+                            <li>Higher household spending corresponds to increased GVA output.</li>
+                            <li>Log-transformation improved linearity and assumption validity.</li>
+                        </ul>
+                    </td>
+                    <td style="border:1px solid #ddd; padding:8px;">
+                        <strong>Answers RQ2:</strong> Establishes a strong statistical relationship between household education spending and economic output, supporting the rejection of <strong>H0,1</strong> in favor of <strong>HA,1</strong>.
+                    </td>
+                </tr>
+
+                <!-- RQ3 -->
+                <tr>
+                    <td style="border:1px solid #ddd; padding:8px;">Impact of Crises on Education Spending (Yolanda & COVID-19)</td>
+                    <td style="border:1px solid #ddd; padding:8px;">OLS-based Interrupted Time-Series Analysis (ITSA)</td>
+                    <td style="border:1px solid #ddd; padding:8px;">
+                        <ul style="margin:0; padding-left:20px;">
+                            <li>Yolanda (2013): ~₱4B short-term decline, recovered by 2015.</li>
+                            <li>COVID-19 (2020): ₱25-30B drop with multi-year effects; recovery begins around 2022.</li>
+                            <li>Spending returns to projected trajectory by 2023-2025.</li>
+                        </ul>
+                    </td>
+                    <td style="border:1px solid #ddd; padding:8px;">
+                        <strong>Answers RQ3:</strong> Quantifies the impact of crises and shows long-term resilience of household education spending.
+                    </td>
+                </tr>
+
+                <!-- Overall -->
+                <tr style="background-color:#f9f9f9;">
+                    <td style="border:1px solid #ddd; padding:8px; font-weight:bold;">Overall Interpretation</td>
+                    <td style="border:1px solid #ddd; padding:8px;">Synthesis of All Models</td>
+                    <td style="border:1px solid #ddd; padding:8px;">
+                        <ul style="margin:0; padding-left:20px;">
+                            <li>Education spending shows long-term growth despite shocks.</li>
+                            <li>HFCE and GVA exhibit strong statistical linkage.</li>
+                            <li>Crises cause interruptions but not long-term declines.</li>
+                        </ul>
+                    </td>
+                    <td style="border:1px solid #ddd; padding:8px;">
+                        Integrates all findings to conclude that <strong>household investment in education is economically significant and resilient</strong>, reinforcing its critical role in national development.
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        
+        <p>
+        Together, these findings demonstrate a consistent narrative: Filipino households continuously invest in education, 
+        even during economic downturns, and their spending significantly contributes to the sector's overall productivity.
+        </p>
+    </section>
+
+    <section>
+        <h2>Limitation and Next Steps</h2>
+
+        <h3>Limitations</h3>
+        <p>
+            While the analysis provides strong evidence, it also has limitations. 
+            First, the data relied on national-level aggregates, meaning household-level differences (income, region, school type) were not captured.  
+            Second, ITSA assumes linear recovery patterns, which may oversimplify real-world post-crisis behavior.  
+            Third, the analysis focused only on HFCE and GVA; factors such as inflation, tuition policy changes, or demographic shifts were not modeled.  
+            Finally, future years beyond 2025 are based on projections, which naturally carry uncertainty.
+        </p>
+
+        <h3>Next Steps</h3>
+        <p>
+            To strengthen the findings, future studies could incorporate household survey data, inflation-adjusted spending, 
+            and additional economic indicators.  
+            A multivariate forecasting model (ARIMA, Prophet, or LSTM) could also more accurately capture future spending trends.  
+            Expanding the dataset to include regional differences would provide a richer understanding of inequality in education spending. 
+            Lastly, combining this economic data with educational outcomes (test scores, enrollment, completion rates) 
+            could reveal how spending translates to learning improvements.
+        </p>
+    </section>
+
+    <section>
+        <h2>Conclusion</h2>
+
+        <p>
+            This research demonstrates several important findings. First, household spending on education in the Philippines 
+            has increased significantly from 2000 to 2025, reflecting greater prioritization of human capital and long-term mobility. 
+            Second, the strong positive correlation between HFCE and GVA provides evidence that household investment contributes 
+            to the economic productivity of the education sector, supporting the rejection of the null hypothesis.
+        </p>
+
+        <p>
+            Third, while major national crises caused notable declines, these effects were temporary. 
+            Education spending showed resilience—recovering quickly after Yolanda and gradually stabilizing following COVID-19. 
+            This pattern emphasizes that education remains a protected and essential household expenditure.
+        </p>
+
+        <p>
+            In conclusion, the long-term upward trend, the strong statistical relationship with economic output, 
+            and the recovery after crises collectively show that household investment in education plays a vital role 
+            in shaping the sector's contribution to national development. These insights may guide policymakers, 
+            educators, and economists in understanding how household behavior supports educational and economic resilience 
+            in the Philippines.
+        </p>
+
+        <h3>Call to Action</h3>
+        <p>
+            Given these insights, policymakers, educational institutions, and economic planners should continue strengthening support 
+            for households—especially during crises—to maintain the upward trajectory of educational investment.  
+            Stakeholders are encouraged to use this data to guide targeted subsidies, expand digital learning access, 
+            and develop crisis-proof education policies.  
+            Ultimately, sustained and well-supported household spending in education will help secure long-term economic stability 
+            and improve the nation's overall learning outcomes.
+        </p>
+    </section>
+    <p style="margin-top:2em;">
+      <a href="index.html">← Back to Homepage</a>
+    </p>
+  </main>
+
+</body>
+</html>

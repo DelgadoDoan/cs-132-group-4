@@ -6,33 +6,76 @@
   <title>Nutshell Plot: Education and GVA Trends</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    body { font-family: "Segoe UI", Arial; background: #f9fafc; color: #333; }
-    header {
-      background: linear-gradient(135deg, #d63384, #f06292);
-      color: white;
-      padding: 3em 1em;
-      text-align: center;
-      border-bottom: 5px solid #b82e73;
-    }
-    h1 { font-size: 2.2em; margin-bottom: 0.3em; }
-    h2 { color: #b82e73; margin-top: 1.5em; }
-    main { text-align: center; padding: 2em; }
-    img {
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin-top: 20px;
-    }
-    section {
-      background: white;
-      padding: 1.5em;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      margin-top: 30px;
-      text-align: justify;
-    }
-    a { color: #b82e73; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+   
+/* ===== Dark Theme to Match index.html ===== */
+body {
+    font-family: "Segoe UI", Arial;
+    background: #0f0f0f;
+    color: #dcdcdc;
+    margin: 0;
+}
+
+/* Header — gradient like homepage hero */
+header {
+    background: linear-gradient(180deg, #121212 0%, #0a0a0a 100%);
+    color: white;
+    padding: 3em 1em;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Title — same glowing blue gradient as index sections */
+h1 {
+    font-size: 2.2em;
+    font-weight: 800;
+    background: linear-gradient(90deg,#8ad1ff,#a4b5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.3em;
+}
+
+/* Section titles — also gradiented to match the theme */
+h2 {
+    background: linear-gradient(90deg,#9bd5ff,#aec8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1.5em;
+    font-weight: 700;
+}
+
+/* Default layout remains unchanged */
+main { text-align: center; padding: 2em; }
+
+/* Images — better depth for dark background */
+img {
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 850px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+/* Card sections — matches your gradient card panels */
+section {
+    background: linear-gradient(145deg,#171717,#0d0d0d);
+    padding: 1.8em;
+    border-radius: 14px;
+    box-shadow:
+        0 0 30px rgba(0,0,0,0.4),
+        inset 0 0 20px rgba(255,255,255,0.03);
+    margin-top: 35px;
+    text-align: justify;
+    color: #e8e8e8;
+}
+
+/* Links — neon glow accent */
+a {
+    color: #8ed6ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+</style>
 </head>
 
 <body>

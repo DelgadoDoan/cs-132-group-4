@@ -9,7 +9,12 @@
 		<title>[CS 132] Group 4: Education & Economics (SDG 4)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- <link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="./assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/main.css" /> -->
+		<link rel="stylesheet" href="css/main.css" />
+
+		
 	</head>
 	<body class="is-preload">
 
@@ -25,13 +30,15 @@
 			</nav>
 
 		<!-- Overview -->
-		<article id="overview" class="wrapper style1">
+		<article id="heading" class="wrapper style1">
 			<div class="container">
 				<header style="text-align:center;">
-					<h1><strong>Household Spending on Education </strong></h1>
-					<h1><strong>and its Economic Contribution </strong></h1>
-					<h1><strong>in the Philippines</strong></h1>
+					<h1><strong class="white-grad">Household Spending on Education</strong></h1>
+					<h1><strong class="white-grad">and its Economic Contribution</strong></h1>
+					<h1><strong class="teal-grad">in the Philippines</strong></h1>
 				</header>
+				<!-- Scroll Arrow (now properly placed) -->
+				<a href="#overview" class="scroll-down"><span></span></a>
 			</div>
 		</article>
 
@@ -54,24 +61,25 @@
 						</p>
 					</div>
 				</header>
+				
 				<div class="row aln-center">
 					<div class="col-12 col-12-medium col-12-small">
 						<section class="box style1">
-							<span class="icon featured fa-book"></span>
+							<span class="icon featured fa-question-circle"></span>
 							<h3>Background</h3>
 							<p>Education is an important asset in economic and social development. In the Philippines, households play a major role in financing education because of the large presence of private schools and training institutions. This makes household spending a key factor in determining access to education and its overall contribution to the economy. From 2000 to 2025, the Philippines experienced major economic changes, including growth periods, natural disasters, and the COVID-19 pandemic. These events affected how families spent on education and how the education sector contributed to the economy. This study examines whether household investments in education are linked to the sector’s Gross Value Added (GVA) and how spending patterns change during economic shocks.</p>
 						</section>
 					</div>
 					<div class="col-12 col-12-medium col-12-small">
 						<section class="box style1">
-							<span class="icon featured fa-comments"></span>
+							<span class="icon featured fa-compass"></span>
 							<h3>Research topic</h3>
 							<p>How has household spending on education changed from 2000 to 2025 and how has this influenced the economic contribution of the education sector in the Philippines?</p>
 						</section>
 					</div>
 					<div class="col-12 col-12-medium col-12-small">
 						<section class="box style1">
-							<span class="icon solid featured fa-camera-retro"></span>
+							<span class="icon featured fa-comments"></span>
 							<h3>Research questions</h3>
 							<p>[RQ1] How have household expenditures on education, relative to other major household spending categories, changed from 2000 to 2025?<br>
 							[RQ2] To what extent does household expenditure on education correlate with changes in the gross value added (GVA) in education?<br>
@@ -80,7 +88,7 @@
 					</div>
 					<div class="col-12 col-12-medium col-12-small">
 						<section class="box style1">
-							<span class="icon featured fa-thumbs-up"></span>
+							<span class="icon featured fa-folder-open"></span>
 							<h3>Hypotheses</h3>
 							<p><strong>H0,1:</strong> Household expenditures on education have no significant effect on the GVA in education.<br>
 							<strong>HA,1:</strong> Household expenditures on education have a significant effect on the GVA in education.</p>
@@ -99,27 +107,30 @@
 					<header>
 						<h2>Data</h2>
 						<p>We consolidated official datasets from OpenStat, the official data portal of the Philippine Statistics Authority (PSA) to build a reproducible foundation for our analyses.</p>
-						
+
 					</header>
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="HFCE" /></a>
-								<h3><a href="https://docs.google.com/spreadsheets/d/1zj8I0Ikr2mZzgfUs7os9zw-pOED__86s/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true">Household Final Consumption Expenditure (HFCE)</a></h3>
+								<a href="#" class="image featured"></a>
+								<!-- <img src="images/pic01.jpg" alt="HFCE" /> -->
+								<h3 class="dataset-title"><a href="https://docs.google.com/spreadsheets/d/1zj8I0Ikr2mZzgfUs7os9zw-pOED__86s/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true">Household Final Consumption Expenditure (HFCE)</a></h3>
 								<p>Source: PSA / OpenStat<br>Coverage: 2000-2025 (Quarterly)<br>Sample size: 1248<br>Notes: Contains breakdown of household spending categories, including education.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="GVA" /></a>
-								<h3><a href="https://docs.google.com/spreadsheets/d/1gjha6QcG8dFtcYcv6KdDTYIjCUxlYMS1/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true">Gross Value Added (GVA) in Education</a></h3>
+								<a href="#" class="image featured"></a>
+								<!-- <img src="images/pic02.jpg" alt="GVA" /> -->
+								<h3 class="dataset-title"><a href="https://docs.google.com/spreadsheets/d/1gjha6QcG8dFtcYcv6KdDTYIjCUxlYMS1/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true">Gross Value Added (GVA) in Education</a></h3>
 								<p>Source: PSA / OpenStat<br>Coverage: 2000-2025 (Quarterly)<br>Sample size: 104<br>Notes: GVA distribution and sectoral contribution of education.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="Combined dataset" /></a>
-								<h3><a href="https://docs.google.com/spreadsheets/d/1t1t0wDM6k9yZO-M8ygdFaEW6hMBlNEoaTHyGe8LjALY/edit?usp=sharing">Project dataset</a></h3>
+								<a href="#" class="image featured"></a>
+								<!-- <img src="images/pic03.jpg" alt="Combined dataset" /> -->
+								<h3 class="dataset-title"><a href="https://docs.google.com/spreadsheets/d/1t1t0wDM6k9yZO-M8ygdFaEW6hMBlNEoaTHyGe8LjALY/edit?usp=sharing">Project dataset</a></h3>
 								<p>Combined dataset aligning HFCE and GVA data for integrated analysis (cleaned and merged).</p>
 							</article>
 						</div>
@@ -144,7 +155,7 @@
 						<div class="col-6 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="nutshell.html" class="image featured"><img src="plots/nutshell.png" alt="Nutshell Plot" /></a>
-								<h3><a href="nutshell.html">In a Nutshell: Education Expenditure & GVA</a></h3>
+								<h3 class = "methods-title"><a href="nutshell.html">In a Nutshell: Education Expenditure & GVA</a></h3>
 								<p>
 								This summary visualization presents the 25-year relationship between household education expenditure and Gross Value Added (GVA).
 								It highlights synchronized growth trends, disruptions from key crises such as Typhoon Yolanda (2013) and COVID-19 (2020),
@@ -159,7 +170,7 @@
 						<!-- RQ1 -->
 							<article class="box style2">
 							<a href="rq1.html" class="image featured"><img src="plots/tsa.png" alt="RQ1" /></a>
-							<h3><a href="rq1.html">RQ1: Spending Patterns</a></h3>
+							<h3 class = "methods-title"><a href="rq1.html">RQ1: Spending Patterns</a></h3>
 							<p>
 								This analysis employs time-series and comparative trend analysis to examine household spending across 
 								key categories such as education, food, housing, and healthcare from 2000 to 2025. 
@@ -174,7 +185,7 @@
 						<!-- RQ2 -->
 							<article class="box style2">
 							<a href="rq2.html" class="image featured"><img src="plots/scatter.png" alt="RQ2" /></a>
-							<h3><a href="rq2.html">RQ2: Relationship with GVA</a></h3>
+							<h3 class = "methods-title"><a href="rq2.html">RQ2: Relationship with GVA</a></h3>
 							<p>
 								Correlation analysis using Pearson's method of correlation is applied to evaluate the relationship between household 
 								education expenditure and Gross Value Added (GVA) from 2000 to 2025. 
@@ -191,7 +202,7 @@
 						<div class="col-6 col-6-medium col-12-small">
 							<article class="box style2">
 							<a href="rq3.html" class="image featured"><img src="plots/itsa.png" alt="RQ3" /></a>
-							<h3><a href="rq3.html">RQ3: Crisis Impact</a></h3>
+							<h3 class = "methods-title"><a href="rq3.html">RQ3: Crisis Impact</a></h3>
 							<p>
 								Interrupted Time Series (ITS) analysis is conducted to assess how major crises such as 
 								Typhoon Yolanda (2013) and the COVID-19 pandemic (2020) affected household spending on education. 
@@ -211,13 +222,13 @@
 			<article id="results" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>Modeling and Interpretation</h2>
+						<h2 class = "section-title">Modeling and Interpretation</h2>
 						<p>Key findings will be added here with charts, tables, and interpretations.</p>
 					</header>
 					<!-- Discussion and Conclusion -->
 					<div  style="margin: 2rem 0;">
 						<article class="box style2">
-							<h3><a href="discussion.html">Discussion and Conclusion</a></h3>
+							<h3 class = "modeling-title"><a href="discussion.html">Discussion and Conclusion</a></h3>
 							<p>
 								Insert short description
 							</p>
@@ -227,7 +238,7 @@
 					<!-- Web Portfolio Story -->
 					<div  style="margin: 2rem 0;">
 						<article class="box style2">
-							<h3><a href="portfolio.html">Web Portfolio Story</a></h3>
+							<h3 class = "modeling-title"><a href="portfolio.html">Web Portfolio Story</a></h3>
 							<p>
 								Insert short description
 							</p>
@@ -246,8 +257,8 @@
 		<article id="team" class="wrapper style2">
 			<div class="container">
 				<header style="text-align:center;">
-					<h2>Meet the Team!</h2>
-					<h4>CS 132 — Group 4</h4>
+					<h2 class = "team">Meet the Team!</h2>
+					<h3>CS 132 — Group 4</h3>
 				</header>
 			</div>
 			<div style="display:flex; justify-content:center;">
@@ -255,7 +266,7 @@
 					<div class="col-6 col-6-medium col-12-small">
 						<article class="box style2">
 							<img style="width:12em; height:12em; border-radius:50%; margin: 1em;" src="images/aine.jpg" /></a>
-							<h3>Lorraine Castrillon</h3>
+							<h3 class = "team-title">Lorraine Castrillon</h3>
 							<p>lmcastrillon@up.edu.ph</p>
 							<p style="text-align: justify;">
 								Hello! I am Lorraine Gwen M. Castrillon, a 4th-year BS Computer Science 
@@ -271,7 +282,7 @@
 					<div class="col-6 col-6-medium col-12-small">
 						<article class="box style2">
 							<img style="width:12em; height:12em; border-radius:50%; margin: 1em;" src="images/doan.png" /></a>
-							<h3>Doan Delgado</h3>
+							<h3 class = "team-title">Doan Delgado</h3>
 							<p>dgdelgado@up.edu.ph</p>
 							<p style="text-align: justify;">
 								Hello! I am Doan Michael G. Delgado and I am currently 
@@ -289,7 +300,7 @@
 					<div class="col-6 col-6-medium col-12-small">
 						<article class="box style2">
 							<img style="width:12em; height:12em; border-radius:50%; margin: 1em;" src="images/vitro.jpg" /></a>
-							<h3>Vincent Enrique</h3>
+							<h3 class = "team-title">Vincent Enrique</h3>
 							<p>vaenrique@up.edu.ph</p>
 							<p style="text-align: justify;">
 								Hello, I am Vitro Enrique! I am currently a 3rd year BS Computer Science student 
@@ -302,7 +313,7 @@
 						</article>
 					</div>
 				</div>
-				<div class="container" style="margin: 0 0.2rem">
+				<!-- <div class="container" style="margin: 0 0.2rem">
 					<div class="col-6 col-6-medium col-12-small">
 						<article class="box style2">
 							<img style="width:12em; height:12em; border-radius:50%; margin: 1em;" src="images/default.png" /></a>
@@ -318,7 +329,7 @@
 								cupidatat non proident, sunt in culpa qui officia deserunt 
 								mollit anim id est laborum.
 							</p>
-						</article>
+						</article> -->
 					</div>
 				</div>
 			</div>

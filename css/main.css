@@ -1917,16 +1917,86 @@ input, select, textarea {
 		padding: 2em;
 	}
 
-		.box.style1 {
+		/* .box.style1 {
 			padding: 3em 2em 3.5em 2em;
 		}
 
 			.box.style1 h3 {
 				margin-bottom: 0.5em;
-			}
+			} */
+		
+		/* ====== BOX STYLE 1 (UPGRADED TO MODERN CARD) ====== */
+		.box.style1 {
+    		padding: 3em 2em 3.5em 2em;
 
-		.box.style2 h3 {
+    		/* Modern dark card background */
+    		background: linear-gradient(145deg, #171717, #0e0e0e);
+
+    		border-radius: 20px;
+    		border: 1px solid rgba(255,255,255,0.05);
+
+    		/* Depth + soft glow */
+    		box-shadow:
+        	0 0 15px rgba(0,0,0,0.5),
+        	inset 0 0 20px rgba(255,255,255,0.03);
+
+    		transition: 0.3s ease;
+    		color: #dcdcdc;          /* improves text visibility */
+    		text-align: center;        /* looks more professional */
+		}
+
+		.box.style1:hover {
+    		transform: translateY(-6px);
+    		box-shadow:
+        	0 0 20px rgba(100,210,224,0.5),   /* glow */
+        	inset 0 0 25px rgba(255,255,255,0.06);
+    		border-color: #64d2e0;
+		}
+
+
+		/* Headings inside the box */
+		.box.style1 h3 {
+    		margin-bottom: 0.5em;
+    		color: #fff;
+    		font-weight: 600;
+		}
+
+		/* Paragraph styling for clean readability */
+		.box.style1 p {
+    		font-size: 15px;
+    		line-height: 1.7;
+		}
+
+
+		/* .box.style2 h3 {
 			margin-bottom: 0.25em;
+		} */
+
+		.box.style2 {
+    		padding: 3em 2em 3.5em 2em;
+
+    		/* Modern dark card background */
+    		background: linear-gradient(145deg, #171717, #0e0e0e);
+
+    		border-radius: 20px;
+    		border: 1px solid rgba(255,255,255,0.05);
+
+    		/* Depth + soft glow */
+    		box-shadow:
+        	0 0 15px rgba(0,0,0,0.5),
+        	inset 0 0 20px rgba(255,255,255,0.03);
+
+    		transition: 0.3s ease;
+    		color: #dcdcdc;          /* improves text visibility */
+    		text-align: center;        /* looks more professional */
+		}
+
+		.box.style2:hover {
+    		transform: translateY(-6px);
+    		box-shadow:
+        	0 0 20px rgba(100,210,224,0.5),   /* glow */
+        	inset 0 0 25px rgba(255,255,255,0.06);
+    		border-color: #64d2e0;
 		}
 
 		.box.style2 .image {
@@ -1936,6 +2006,8 @@ input, select, textarea {
 			margin: -4em 0 4em -4em;
 			width: auto;
 		}
+
+		
 
 /* Icons */
 
@@ -1994,22 +2066,31 @@ input, select, textarea {
 	}
 
 		.wrapper.style1 {
-			background-image: none;
-			background-color: #fff;
+			height: 100vh;
+			background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("../images/bg.jpg");
+			background-color: #141414;
+			background-size: cover;    
+			background-position: center;    
+			background-repeat: no-repeat;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
 		}
 
 		.wrapper.style2 {
-			background-color: #fafafa;
-			text-shadow: 1px 1px 0px #fff;
+			background-color: #141414;
+			/* text-shadow: 1px 1px 0px #fff; */
 		}
 
 		.wrapper.style3 {
-			background-color: #f4f4f4;
-			text-shadow: 1px 1px 0px #fff;
+			background-color: #141414;
+			/* text-shadow: 1px 1px 0px #fff; */
 		}
 
 		.wrapper.style4 {
-			background-color: #303030;
+			background-color: #fff;
 			color: #999;
 			text-shadow: -1px -1px 0px #181818;
 		}
@@ -2023,7 +2104,7 @@ input, select, textarea {
 			.wrapper.style4 form select,
 			.wrapper.style4 form textarea {
 				border: none;
-				background: #282828;
+				background: #fff;
 			}
 
 				.wrapper.style4 form input[type=text]:focus,
@@ -2443,3 +2524,198 @@ input, select, textarea {
 					}
 
 	}
+
+/*  NEW HEADING DESIGN */
+#heading {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background shadow overlay */
+#heading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle,
+      rgba(0,0,0,0.75) 0%,
+      rgba(0,0,0,0.45) 45%,
+      rgba(0,0,0,0.10) 70%,
+      rgba(0,0,0,0) 100%
+  );
+  z-index: 0; /* goes behind text */
+}
+
+/* Force headings above shadow */
+#heading header,
+#heading h1 {
+  position: relative;
+  z-index: 5;
+}
+
+/* ============================= */
+/*   FORCE GRADIENT HEADINGS     */
+/* ============================= */		
+.white-grad {
+  background: linear-gradient(90deg, #d9e3ee, #357b97);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.teal-grad {
+  background: linear-gradient(90deg, #64d2e0 0%, #2B6B85 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+
+#overview h2 {
+    color: #d6d6d6;           /* normal paragraph text color */
+}
+
+#data h2 {
+    color: #d6d6d6;           /* normal paragraph text color */
+}
+
+#methods h2 {
+    color: #d6d6d6;           /* normal paragraph text color */
+}
+
+.section-title {
+    color: #d6d6d6;
+}
+
+.team {
+    color: #d6d6d6;
+}
+
+
+/* 
+#overview h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+} */
+
+/* Underline */
+#overview h2::after,
+#data h2::after,
+#methods h2::after,
+.section-title::after {
+    content: "";
+    display: block;
+    width: 1000px;                /* adjust thickness */
+    height: 0.5px;                /* underline thickness */
+    margin: 10px auto 0;         /* spacing below text */
+    background: #ffffff;        /* underline color (can make gradient too) */
+    border-radius: 5px;
+}
+
+
+/* Smooth scroll link target */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Arrow */
+.scroll-down {
+    position: absolute;
+    bottom: 100px; /* moves arrow lower */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.scroll-down span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid #d3d3d3;
+    border-right: 3px solid #d3d3d3;
+    transform: rotate(0deg);
+    margin: 10 auto;
+    transition: .3s ease;
+}
+
+/* Hover glow */
+.scroll-down:hover span {
+    border-color: #64d2e0;
+}
+
+/* Subtle bounce */
+@keyframes bounce {
+    0%,20%,50%,80%,100% { transform: translate(-50%,0) rotate(45deg); }
+    40% { transform: translate(-50%,8px) rotate(45deg); }
+    60% { transform: translate(-50%,4px) rotate(45deg); }
+}
+
+.scroll-down {
+    animation: bounce 2s infinite;
+}
+
+
+.featured.fa-question-circle {
+    color: #4db6d6; /* ← replace with your color */
+}
+
+.featured.fa-comments {
+    color: #4db6d6; /* ← replace with your color */
+}
+
+.featured.fa-compass {
+    color: #4db6d6; /* ← replace with your color */
+}
+
+.featured.fa-folder-open{
+    color: #4db6d6; /* ← replace with your color */
+}
+
+
+.dataset-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    background: linear-gradient(90deg,#9CCBDD,#4B8AA2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    letter-spacing: 0px;
+    text-shadow: none;        /* cleaner when gradient used */
+    margin-bottom: 14px;
+}
+
+
+
+.methods-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    background: linear-gradient(90deg,#9CCBDD,#4B8AA2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    letter-spacing: 0px;
+    text-shadow: none;        /* cleaner when gradient used */
+    margin-bottom: 14px;
+}
+
+.modeling-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    background: linear-gradient(90deg,#9CCBDD,#4B8AA2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    letter-spacing: 0px;
+    text-shadow: none;        /* cleaner when gradient used */
+    margin-bottom: 14px;
+}
+
+.team-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    background: linear-gradient(90deg,#9CCBDD,#4B8AA2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    letter-spacing: 0px;
+    text-shadow: none;        /* cleaner when gradient used */
+    margin-bottom: 14px;
+}
+

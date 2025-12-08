@@ -1665,10 +1665,10 @@ input, select, textarea {
 	input[type="reset"],
 	button,
 	.button {
-		background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+		background-image: url("images/class1233.jpg"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+		background-image: url("images/class1233.jpg"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+		background-image: url("images/class1233.jpg"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+		background-image: url("images/class1233.jpg"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 		-moz-transition: background-color .2s ease-in-out;
 		-webkit-transition: background-color .2s ease-in-out;
 		-ms-transition: background-color .2s ease-in-out;
@@ -1796,10 +1796,10 @@ input, select, textarea {
 			}
 
 				ul.social li a:before {
-					background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-					background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+					background-image: url("images/class1233.jpg"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+					background-image: url("images/class1233.jpg"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+					background-image: url("images/class1233.jpg"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+					background-image: url("images/class1233.jpg"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 					-moz-transition: background-color .2s ease-in-out;
 					-webkit-transition: background-color .2s ease-in-out;
 					-ms-transition: background-color .2s ease-in-out;
@@ -1973,7 +1973,9 @@ input, select, textarea {
 		} */
 
 		.box.style2 {
-    		padding: 3em 2em 3.5em 2em;
+    		width: 75%;
+    		padding: 2em 1.5em;
+    		margin-inline: auto;
 
     		/* Modern dark card background */
     		background: linear-gradient(145deg, #171717, #0e0e0e);
@@ -1990,7 +1992,7 @@ input, select, textarea {
     		color: #dcdcdc;          /* improves text visibility */
     		text-align: center;        /* looks more professional */
 		}
-
+		
 		.box.style2:hover {
     		transform: translateY(-6px);
     		box-shadow:
@@ -2059,7 +2061,7 @@ input, select, textarea {
 /* Wrappers */
 
 	.wrapper {
-		background-image: url("images/bg.png");
+		background-image: url("images/class1233.jpg");
 		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 		padding: 8em 0 8em 0;
 		text-align: center;
@@ -2068,7 +2070,7 @@ input, select, textarea {
 		.wrapper.style1 {
 			height: 100vh;
 			background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url("../images/bg.jpg");
+                url("../images/class1233.jpg");
 			background-color: #141414;
 			background-size: cover;    
 			background-position: center;    
@@ -2571,6 +2573,10 @@ input, select, textarea {
 }
 
 
+#heading h2 { 
+	 color: #d6d6d6;           /* normal paragraph text color */
+}
+
 #overview h2 {
     color: #d6d6d6;           /* normal paragraph text color */
 }
@@ -2581,6 +2587,10 @@ input, select, textarea {
 
 #methods h2 {
     color: #d6d6d6;           /* normal paragraph text color */
+}
+
+#results h3 {
+	color: #d6d6d6;   
 }
 
 .section-title {
@@ -2719,3 +2729,286 @@ html {
     margin-bottom: 14px;
 }
 
+strong {
+    font-weight: 800;
+    color: #8ad1ff;
+}
+
+.animated-text {
+    font-family: 'Open Sans', sans-serif; /* Or choose any modern font */
+    font-size: 25px; /* Adjust size based on your needs */
+    color: #ffffff; /* Bright white */
+    /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); Glowing effect */
+    font-weight: 300; /* Lighter weight for a softer look */
+	font-style: italic
+	/* /* text-decoration: italic;
+    text-decoration-thickness: .1px; /* Controls the thickness of the underline */
+    /* text-underline-offset: 5px; */
+}
+
+.highlight-how{
+	font-family: 'Open Sans', sans-serif; /* Or choose any modern font */
+    font-size: 25px; /* Adjust size based on your needs */
+    color: #ffffff; /* Teal (you can replace this with your preferred color) */
+	font-weight: 300; /* Lighter weight for a softer look */
+}
+
+.box {
+	position: relative;
+	overflow: hidden;
+}
+
+.box-content {
+	transition: .35s ease;
+}
+
+/* APPLY BLUR ONLY TO THE IMAGE — NOT TEXT */
+.box:hover img {
+	filter: blur(6px) brightness(.65);
+	transform: scale(1.03);
+}
+
+/* keep text clear */
+.box:hover .methods-title,
+.box:hover p {
+	filter: none !important;
+}
+
+/* overlay text */
+.hover-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #ffffff;
+	font-size: 22px;
+	font-weight: 800;
+	opacity: 0;
+	pointer-events: none;
+	transition: .35s ease;
+}
+
+.box:hover .hover-text {
+	opacity: 1;
+}
+
+
+/* Blur the content only (NOT the overlay text) */
+.box.style2:hover .blur-area {
+    filter: blur(4px) brightness(0.6);
+}
+
+/* Overlay text styling */
+.box.style2 .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    opacity: 0;
+    transition: 0.3s ease;
+    pointer-events: none;
+    /* text-shadow: 0 0 10px rgba(255,255,255,0.9); */
+}
+
+/* Show text on hover */
+.box.style2:hover .hover-text {
+    opacity: 1;
+}
+
+/* Makes link cover entire box */
+.box.style2 {
+    position:relative;
+}
+
+.box.style2 .box-click {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:5;                /* stays above content */
+    opacity:0;                /* invisible */
+    cursor:pointer;
+}
+
+.box.style2 .hover-text {
+    text-decoration: none !important;  /* removes underline */
+    color: #ffffff;                     /* white text instead of blue */
+}
+
+/* In case your CSS link style is overriding */
+.box.style2:hover .hover-text {
+    color: #ffffff !important;
+}
+
+.box.style2 a {
+    text-decoration: none;
+    color: inherit; /* keeps theme color, stops link blue */
+}
+
+.pipeline-section {
+	text-align: center;
+	max-width: 900px;
+	margin: auto;
+	padding-top: 1.5rem;
+}
+
+.pipeline-section h2 {
+	font-size: 2rem;
+	margin-bottom: .8rem;
+	font-weight: 700;
+	border-bottom: 1px solid #3db6c6;
+	padding-bottom: .6rem;
+	width: fit-content;
+	margin-inline: auto;
+}
+
+.pipeline-section .desc {
+	max-width: 700px;
+	margin: auto;
+	font-size: 1rem;
+	opacity: 0.85;
+	margin-bottom: 2rem;
+}
+
+/* The actual pipeline */
+.pipeline {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	border-left: 1px solid #ffffff;
+	padding-left: 2rem;
+}
+
+.pipeline .step {
+	margin-bottom: 2.6rem;
+	position: relative;
+}
+
+.pipeline .step h3 {
+	color: #ffffff;
+	font-weight: 700;
+	margin-bottom: .6rem;
+}
+
+/* dot nodes on line */
+.pipeline .step .dot {
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	border-radius: 50%;
+	position: absolute;
+	left: -2.25rem;
+	top: 4px;
+	/* box-shadow: 0 0 8px #ffffff; */
+}
+
+/* Adjust spacing for the last one */
+.pipeline .step:last-child {
+	margin-bottom: 10rem;
+}
+
+.analysis-section {
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    padding-top:1.4rem;
+}
+
+.analysis-section h2 {
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:.7rem;
+    border-bottom:1px solid #ffffff;
+    padding-bottom:10rem;
+    width:fit-content;
+    margin-inline:auto;
+}
+
+.analysis-section .desc {
+    opacity:.88;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:2rem;
+}
+
+/* VERTICAL FLOW */
+.analysis-flow {
+    position:relative;
+    border-left:1px solid #ffffff;
+    padding-left:2rem;
+}
+
+.analysis-step {
+    margin-bottom:2.8rem;
+    position:relative;
+}
+
+.flow-node {
+    width:10px;
+    height:10px;
+    background:#ffffff;
+    border-radius:50%;
+    position:absolute;
+    left:-2.25rem;
+    top:4px;
+    /* box-shadow:0 0 8px #ffffff; */
+}
+
+.analysis-step h3 {
+    color:#ffffff;
+    font-weight:700;
+    margin-bottom:.6rem;
+}
+
+.analysis-step .tools {
+    font-size:.95rem;
+    opacity:.9;
+    font-style:italic;
+}
+
+.analysis-step:last-child { margin-bottom:10rem; }
+
+.click-more {
+    text-decoration: underline;
+    margin-bottom: 4px; 
+    margin-top: 20px; /* move closer to plot */
+    display: block;
+    text-align: center; /* optional */
+	color: #ffffff;   /* change this to any color */
+}
+
+.three-box-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Make boxes no longer span full width */
+.box.style2 {
+    width: 100%; /* overwrite 75% width */
+    max-width: none; /* allow equal grid size */
+    padding: 2em 1.5em;
+}
+
+.three-box-grid {
+    align-items: start; /* makes tops aligned */
+}
+
+.box.style2 {
+    height: auto; /* let height match content */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Prevent blur for style1 boxes */
+.box.style1:hover img {
+    filter: none !important;
+    transform: none !important;
+}

@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="./assets/css/main.css" />
 		<link rel="stylesheet" href="/assets/css/main.css" /> -->
 		<link rel="stylesheet" href="css/main.css" />
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 		
 	</head>
@@ -36,7 +37,23 @@
 					<h1><strong class="white-grad">Household Spending on Education</strong></h1>
 					<h1><strong class="white-grad">and its Economic Contribution</strong></h1>
 					<h1><strong class="teal-grad">in the Philippines</strong></h1>
+
+					<p><span class = "highlight-how">how does </span><span class = "animated-text"><span class="typed"></span><span class="typed-cursor" aria-hidden="true"></span></p>
+					<script>
+    					var options = {
+      						strings: ["a household prioritize education?", "spending influence economic output?", "the sector respond under crisis?"],
+      						typeSpeed: 30,
+      						backSpeed: 10,
+     	 					backDelay: 2000,
+      						startDelay: 500,
+      						loop: true,
+      						showCursor: true		
+    					};
+    					var typed = new Typed(".typed", options);
+  					</script>
 				</header>
+			</div>
+
 				<!-- Scroll Arrow (now properly placed) -->
 				<a href="#overview" class="scroll-down"><span></span></a>
 			</div>
@@ -67,36 +84,47 @@
 						<section class="box style1">
 							<span class="icon featured fa-question-circle"></span>
 							<h3>Background</h3>
-							<p>Education is an important asset in economic and social development. In the Philippines, households play a major role in financing education because of the large presence of private schools and training institutions. This makes household spending a key factor in determining access to education and its overall contribution to the economy. From 2000 to 2025, the Philippines experienced major economic changes, including growth periods, natural disasters, and the COVID-19 pandemic. These events affected how families spent on education and how the education sector contributed to the economy. This study examines whether household investments in education are linked to the sector’s Gross Value Added (GVA) and how spending patterns change during economic shocks.</p>
+							<p>Education is an important asset in economic and social development.  — it is a decision rooted in aspiration. Each peso invested symbolizes hope, mobility, and the belief that learning can change the trajectory of a family.</p>
+							<p>In the Philippines, households play a major role in financing education because of the large presence of private schools and training institutions. This makes household spending a key factor in determining access to education and its overall contribution to the economy. From 2000 to 2025, the Philippines experienced major economic changes, including growth periods, natural disasters, and the COVID-19 pandemic. These events affected how families spent on education and how the education sector contributed to the economy. This study examines whether household investments in education are linked to the sector’s Gross Value Added (GVA) and how spending patterns change during economic shocks.</p>
 						</section>
 					</div>
 					<div class="col-12 col-12-medium col-12-small">
 						<section class="box style1">
 							<span class="icon featured fa-compass"></span>
 							<h3>Research topic</h3>
-							<p>How has household spending on education changed from 2000 to 2025 and how has this influenced the economic contribution of the education sector in the Philippines?</p>
+							<p><strong>How has household spending on education changed from 2000 to 2025 and how has this influenced the economic contribution of the education sector in the Philippines?</p></strong>
+							<P>This portfolio helps students, researchers, educators, and policymakers visualize how household spending on education changes over time — in both stable periods and national crises. Using time-series trends, correlation analysis, and Interrupted Time Series modeling, it maps the relationship between education expenditures and Gross Value Added (GVA) from 2000 to 2025, revealing strong economic correlation and notable resilience during shocks like Typhoon Yolanda (2013) and COVID-19 (2020).
+								Beyond presenting data, it functions as a decision-making tool. The portfolio simplifies economic behavior into visuals, allowing users to ask: <br>
+								<br>
+								How do households prioritize education? <br>
+								How does spending influence economic output? <br>
+								How does the sector respond under crisis? <br>
+							</P>
 						</section>
 					</div>
 					<div class="col-12 col-12-medium col-12-small">
 						<section class="box style1">
 							<span class="icon featured fa-comments"></span>
 							<h3>Research questions</h3>
-							<p>[RQ1] How have household expenditures on education, relative to other major household spending categories, changed from 2000 to 2025?<br>
-							[RQ2] To what extent does household expenditure on education correlate with changes in the gross value added (GVA) in education?<br>
-							[RQ3] How did household spending on education change during national economic crises (e.g. 2013 Typhoon Yolanda and 2020 COVID-19)?</p>
+							<p>Our research was guided by three central questions — each one building on the last to form a complete picture of how Filipino families invest in education. 
+								First, we ask <strong>[RQ1] How have household expenditures on education, relative to other major household spending categories, changed from 2000 to 2025?</strong> 
+								This establishes how priorities shift over time. We then explore impact by examining 
+								<strong>[RQ2] To what extent does household expenditure on education correlate with changes in the gross value added (GVA) in education?</strong>, 
+								allowing us to see whether increased spending contributes to economic output. Finally, we tested resilience through <strong>[RQ3] How did household spending on education change during national economic crises (e.g. 2013 Typhoon Yolanda and 2020 COVID-19)? </strong>, revealing how investment behaves when the system is under crisis.
 						</section>
 					</div>
 					<div class="col-12 col-12-medium col-12-small">
 						<section class="box style1">
 							<span class="icon featured fa-folder-open"></span>
 							<h3>Hypotheses</h3>
+							<P>Underlying these questions was our hypothesis: that household spending on education contributes to national economic output. Either this relationship held true — or it didn’t. The analysis that follows allowed the data to answer for itself.</P>
 							<p><strong>H0,1:</strong> Household expenditures on education have no significant effect on the GVA in education.<br>
 							<strong>HA,1:</strong> Household expenditures on education have a significant effect on the GVA in education.</p>
 						</section>
 					</div>
 				</div>
 				<footer>
-					<p>Our aim is to contribute insights on how education spending impacts national economic outcomes.</p>
+					<p><i>Our aim is to contribute insights on how education spending impacts national economic outcomes.</i></p>
 				</footer>
 			</div>
 		</article>
@@ -107,51 +135,265 @@
 					<header>
 						<h2>Data</h2>
 						<p>We consolidated official datasets from OpenStat, the official data portal of the Philippine Statistics Authority (PSA) to build a reproducible foundation for our analyses.</p>
-
 					</header>
+					
+					<section id="data-pipeline" class="pipeline-section">
+						<div class="pipeline">
+							<div class="step">
+								<div class="dot"></div>
+								<h3>a. Data Acquisition</h3>
+								<p>
+									Quarterly HFCE and GVA (education) datasets were downloaded from PSA OpenStat.
+									Metadata integrity (labels, units, nominal/real pricing) was checked and only
+									education-related observations were retained.
+								</p>
+								</div>
+
+							<div class="step">
+								<div class="dot"></div>
+								<h3>b. Data Cleaning & Preparation</h3>
+								<p>
+									Dates were standardized and merged into a 2000–2025 quarterly timeline.
+									Missing or inconsistent entries were cleaned, formats unified, and HFCE-education
+									spending isolated for comparison.
+								</p>
+								</div>
+
+							<div class="step">
+								<div class="dot"></div>
+								<h3>c. Variable Construction & Integration</h3>
+								<p>
+									HFCE (education) and GVA values were combined, inflation-adjusted, and scaled
+									for readability. Optional indicators (per capita, % of HFCE) were prepared for
+									extended analysis.
+								</p>
+								</div>
+
+							<div class="step">
+								<div class="dot"></div>
+								<h3>d. Data Validation</h3>
+								<p>
+									Values were verified against PSA reports to ensure accuracy, alignment, and
+									absence of breakpoints during merging & scaling.
+								</p>
+								</div>
+
+							<div class="step">
+								<div class="dot"></div>
+								<h3>e. Data Analysis Techniques</h3>
+								<p>
+									RQ1: Visualization of trends (2000–2025)<br>
+									RQ2: Pearson correlation (raw + log)<br>
+									RQ3: Crisis effects via Interrupted Time Series (Yolanda 2013, COVID-19 2020)
+								</p>
+								</div>
+
+						</div>
+					</section>
+
+					
+				<p class="click-more">click box to see more</p>
+					<!-- HFCE -->
+				<div class="three-box-grid">
+					<article class="box style2">
+						<div class="blur-area"> <!-- Only this will blur -->
+							<h3 class="dataset-title">Household Final Consumption Expenditure (HFCE)</h3>
+							<a href="https://docs.google.com/spreadsheets/d/1zj8I0Ikr2mZzgfUs7os9zw-pOED__86s/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true" class="box-click"></a> <!-- FULL CLICKABLE LAYER -->
+							<p>Source: PSA / OpenStat<br>Coverage: 2000–2025 (Quarterly)<br>Sample size: 1248</p>
+							<p>Notes: Contains breakdown of spending categories, including education.</p>
+						</div>
+						<div>
+							<span class="hover-text"><a>click for more</span><a href="https://docs.google.com/spreadsheets/d/1zj8I0Ikr2mZzgfUs7os9zw-pOED__86s/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true"></a>
+						</div>
+					</article>
+
+					<!-- GVA -->
+					<article class="box style2">
+						<div class="blur-area"> <!-- Only this will blur -->
+							<h3 class="dataset-title">Gross Value Added (GVA) in Education</h3>
+							<a href="https://docs.google.com/spreadsheets/d/1gjha6QcG8dFtcYcv6KdDTYIjCUxlYMS1/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true" class="box-click"></a> <!-- FULL CLICKABLE LAYER -->
+							<p>Source: PSA / OpenStat<br>Coverage: 2000-2025 (Quarterly)<br>Sample size: 104<br>Notes: GVA distribution and sectoral contribution of education.</p>
+						</div>
+						<div>
+							<span class="hover-text"><a>click for more</span><a href="https://docs.google.com/spreadsheets/d/1zj8I0Ikr2mZzgfUs7os9zw-pOED__86s/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true"></a>
+						</div>
+					</article>
+
+					<!-- Combined -->
+					<article class="box style2">
+						<div class="blur-area"> <!-- Only this will blur -->
+							<h3 class="dataset-title">Project dataset</h3>
+							<a href="https://docs.google.com/spreadsheets/d/1t1t0wDM6k9yZO-M8ygdFaEW6hMBlNEoaTHyGe8LjALY/edit?usp=sharing" class="box-click"></a> <!-- FULL CLICKABLE LAYER -->
+							<p>Combined dataset aligning HFCE and GVA data for integrated analysis (cleaned and merged).</p>
+						</div>
+						<div>
+							<span class="hover-text"><a>click for more</span><a href="https://docs.google.com/spreadsheets/d/1zj8I0Ikr2mZzgfUs7os9zw-pOED__86s/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true"></a>
+						</div>
+					</article>
+
+				</div>
+			</article>
+					<!-- 
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured"></a>
-								<!-- <img src="images/pic01.jpg" alt="HFCE" /> -->
+								<img src="images/pic01.jpg" alt="HFCE" />
 								<h3 class="dataset-title"><a href="https://docs.google.com/spreadsheets/d/1zj8I0Ikr2mZzgfUs7os9zw-pOED__86s/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true">Household Final Consumption Expenditure (HFCE)</a></h3>
 								<p>Source: PSA / OpenStat<br>Coverage: 2000-2025 (Quarterly)<br>Sample size: 1248<br>Notes: Contains breakdown of household spending categories, including education.</p>
 							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
+						</div> -->
+
+						<!-- <div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured"></a>
-								<!-- <img src="images/pic02.jpg" alt="GVA" /> -->
+								<img src="images/pic02.jpg" alt="GVA" />
 								<h3 class="dataset-title"><a href="https://docs.google.com/spreadsheets/d/1gjha6QcG8dFtcYcv6KdDTYIjCUxlYMS1/edit?usp=sharing&ouid=102592181475819337219&rtpof=true&sd=true">Gross Value Added (GVA) in Education</a></h3>
 								<p>Source: PSA / OpenStat<br>Coverage: 2000-2025 (Quarterly)<br>Sample size: 104<br>Notes: GVA distribution and sectoral contribution of education.</p>
 							</article>
 						</div>
+						 -->
+						
+						<!-- 
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured"></a>
-								<!-- <img src="images/pic03.jpg" alt="Combined dataset" /> -->
+								<img src="images/pic03.jpg" alt="Combined dataset" />
 								<h3 class="dataset-title"><a href="https://docs.google.com/spreadsheets/d/1t1t0wDM6k9yZO-M8ygdFaEW6hMBlNEoaTHyGe8LjALY/edit?usp=sharing">Project dataset</a></h3>
 								<p>Combined dataset aligning HFCE and GVA data for integrated analysis (cleaned and merged).</p>
 							</article>
-						</div>
-					</div>
-				</div>
-			</article>
+						</div> -->
 
-			<!-- Methods -->
+					<!-- </div> -->
+				<!-- </div>
+			</article> -->
+	
+			<!-- 
+			Methods -->
 			<article id="methods" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>Methods</h2>
-						<p>
-							The following section outlines the methods and analytical approaches used to address each research question. 
+						<h2 class = "section-title">Methods</h2>
+						<p>The following section outlines the methods and analytical approaches used to address each research question. 
 							Each page presents the relevant statistical technique, its purpose, and how it contributes to understanding 
 							household expenditure behavior in the Philippines. Our analysis pipeline combines statistical tests, visualization, 
-							and robust checks to ensure validity.
-						</p>
+							and robust checks to ensure validity.</p>
 					</header>
-					<div style="margin: 2rem 0;">
-						<!-- Nutshell Plot -->
+
+					<section id="analysis" class="analysis-section">
+    				<div class="analysis-flow">
+						<div class="analysis-step">
+							<div class="flow-node"></div>
+							<h3>RQ1 — Household Spending Patterns (2000–2025)</h3>
+							<p>
+								To examine long-term consumption behavior, time-series analysis and comparative trend analysis were used to track expenditure across education, food, housing, and healthcare. 
+								Quarterly HFCE data from 2000–2025 were visualized through multi-category line graphs to observe growth trajectories, seasonal fluctuations, and category dominance over time.
+								Tools: Python (pandas, numpy, matplotlib)
+								
+								This method enabled identification of spending priorities and allowed direct comparison between education and other essential categories, revealing upward expenditure movement and shifts in consumption structure over 25 years.
+            				</p>
+            				<p class="tools"><strong>Tools:</strong> pandas, numpy, matplotlib</p>
+        					</div>
+							
+						<div class="analysis-step">
+							<div class="flow-node"></div>
+							<h3>RQ2 — HFCE & GVA Relationship</h3>
+							<p>
+                				To determine whether household expenditures on education are linked to national economic output, Pearson’s Correlation Coefficient was applied to HFCE (education) and Gross Value Added (GVA) time-series.
+								
+								Prior to testing, both variables underwent normality inspection and log-transformation to correct skewness and satisfy assumptions of linearity and variance stability. 
+								Scatterplots were then generated for both raw and log-scaled data, followed by correlation computation.
+								Tools: Python (scipy, statsmodels)
+								
+								This approach measured the strength and direction of association, providing statistical evidence of whether increases in household spending correspond with productivity and expansion in the education sector.
+            				</p>
+							<p class="tools"><strong>Tools:</strong> scipy, statsmodels</p>
+        					</div>
+							
+						<div class="analysis-step">
+            				<div class="flow-node"></div>
+            				<h3>RQ3 — Crisis Impact (2013 & 2020)</h3>
+            				<p>
+                				To examine long-term consumption behavior, time-series analysis and comparative trend analysis were used to track expenditure across education, food, housing, and healthcare. Quarterly HFCE data from 2000–2025 were visualized through multi-category line graphs to observe growth trajectories, seasonal fluctuations, and category dominance over time.Tools: Python (pandas, numpy, matplotlib)
+								This method enabled identification of spending priorities and allowed direct comparison between education and other essential categories, revealing upward expenditure movement and shifts in consumption structure over 25 years.
+            				</p>
+            				<p class="tools"><strong>Tools:</strong> pandas, statsmodels (OLS)</p>
+        					</div>
+
+    				</div>
+				</section>
+
+				<p class="click-more">click plots to see more</p>
+					<article class="box style2">
+						<div class="box-content">
+								<a href="nutshell.html" class="image featured"><img src="plots/nutshell.png" alt="Nutshell Plot" /></a>
+								<h3 class="methods-title"><a href="nutshell.html">In a Nutshell: Education Expenditure & GVA</a></h3>
+								<p>
+								This summary visualization presents the 25-year relationship between household education expenditure and Gross Value Added (GVA).
+								It highlights synchronized growth trends, disruptions from key crises such as Typhoon Yolanda (2013) and COVID-19 (2020),
+								and the rapid post-crisis recoveries that demonstrate education's resilience as a household priority.
+								<br><br>
+								Tools: Python (<code>pandas</code>, <code>matplotlib</code>, <code>seaborn</code>).
+								</p>
+								</div>
+					<div class="hover-text">click for more</div>
+				</article>
+
+				<!-- RQ1 -->
+				<article class="box style2">
+						<div class="box-content">
+								<a href="rq1.html" class="image featured"><img src="plots/tsa.png" alt="RQ1" /></a>
+								<h3 class="methods-title"><a href="nutshell.html">RQ1: Spending Patterns</a></h3>
+								<p>
+								This analysis employs time-series and comparative trend analysis to examine household spending across 
+								key categories such as education, food, housing, and healthcare from 2000 to 2025. 
+								The corresponding graphs visualize changes in consumption priorities over time and reveal long-term 
+								expenditure trends that reflect economic and social development. 
+								<br><br>
+								Tools: Python (<code>pandas</code>, <code>matplotlib</code>, <code>seaborn</code>).
+								</p>
+								</div>
+					<div class="hover-text">click for more</div>
+				</article>
+
+				<!-- RQ2 -->
+				<article class="box style2">
+						<div class="box-content">
+								<a href="rq2.html" class="image featured"><img src="plots/scatter.png" alt="RQ2" /></a>
+								<h3 class="methods-title"><a href="nutshell.html">RQ2: Relationship with GVA</a></h3>
+								<p>
+								Correlation analysis using Pearson's method of correlation is applied to evaluate the relationship between household 
+								education expenditure and Gross Value Added (GVA) from 2000 to 2025. 
+								The plotted graphs display how these two indicators move over time and help determine the strength and 
+								direction of their association. Log transformations are performed to normalize distributions 
+								and improve the accuracy of statistical inference. 
+								<br><br>
+								Tools: Python (<code>numpy</code>, <code>scipy</code>, <code>matplotlib</code>, <code>seaborn</code>).
+								</p>
+								</div>
+					<div class="hover-text">click for more</div>
+				</article>
+
+				<!-- RQ3 -->
+				<article class="box style2">
+						<div class="box-content">
+								<a href="rq3.html" class="image featured"><img src="plots/itsa.png" alt="RQ3" /></a>
+								<h3 class="methods-title"><a href="nutshell.html">RQ3: Crisis Impact</a></h3>
+								<p>
+								Interrupted Time Series (ITS) analysis is conducted to assess how major crises such as 
+								Typhoon Yolanda (2013) and the COVID-19 pandemic (2020) affected household spending on education. 
+								The graph visualizes points of disruption in the expenditure trend and helps quantify both 
+								short-term and long-term effects. 
+								This method provides a clear understanding of how external shocks influence household economic behavior. 
+								<br><br>
+								Tools: Python (<code>numpy</code>, <code>scipy</code>, <code>statsmodels</code>, <code>matplotlib</code>, <code>seaborn</code>).
+								</p>
+								</div>
+					<div class="hover-text">click for more</div>
+				</article>
+
+					<!-- <div style="margin: 2rem 0;">
+						Nutshell Plot
 						<div class="col-6 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="nutshell.html" class="image featured"><img src="plots/nutshell.png" alt="Nutshell Plot" /></a>
@@ -166,8 +408,9 @@
 							</article>
 						</div>
 					</div>
-					<div  style="margin: 2rem 0;">
-						<!-- RQ1 -->
+					<div  style="margin: 2rem 0;"> -->
+
+						<!-- RQ1
 							<article class="box style2">
 							<a href="rq1.html" class="image featured"><img src="plots/tsa.png" alt="RQ1" /></a>
 							<h3 class = "methods-title"><a href="rq1.html">RQ1: Spending Patterns</a></h3>
@@ -180,10 +423,11 @@
 								Tools: Python (<code>pandas</code>, <code>matplotlib</code>, <code>seaborn</code>).
 							</p>
 							</article>
-					</div>
-					<div style="margin: 2rem 0;">
+					</div> -->
+					
+					<!-- <div style="margin: 2rem 0;"> -->
 						<!-- RQ2 -->
-							<article class="box style2">
+							<!-- <article class="box style2">
 							<a href="rq2.html" class="image featured"><img src="plots/scatter.png" alt="RQ2" /></a>
 							<h3 class = "methods-title"><a href="rq2.html">RQ2: Relationship with GVA</a></h3>
 							<p>
@@ -196,10 +440,11 @@
 								Tools: Python (<code>numpy</code>, <code>scipy</code>, <code>matplotlib</code>, <code>seaborn</code>).
 							</p>
 							</article>
-					</div>
-					<div style="margin: 2rem 0;">
+					</div> -->
+					
+					<!-- <div style="margin: 2rem 0;"> -->
 						<!-- RQ3 -->
-						<div class="col-6 col-6-medium col-12-small">
+						<!-- <div class="col-6 col-6-medium col-12-small">
 							<article class="box style2">
 							<a href="rq3.html" class="image featured"><img src="plots/itsa.png" alt="RQ3" /></a>
 							<h3 class = "methods-title"><a href="rq3.html">RQ3: Crisis Impact</a></h3>
@@ -214,7 +459,7 @@
 							</p>
 							</article>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</article>
 
@@ -223,19 +468,46 @@
 				<div class="container">
 					<header>
 						<h2 class = "section-title">Modeling and Interpretation</h2>
-						<p>Key findings will be added here with charts, tables, and interpretations.</p>
+						<p>
+							Filipino household spending on education has risen sharply from 2000 to 2025, growing from roughly ₱70 billion to nearly ₱250 billion—despite setbacks during Typhoon Yolanda in 2013 and the COVID-19 pandemic in 2020. 
+							Statistical tests showed a strong positive correlation between educational spending and economic output (GVA) in the education sector, indicating that higher household investment aligns with increased sector performance. 
+							Interrupted Time-Series Analysis further revealed that while crises caused temporary drops—about ₱4B post-Yolanda and ₱25–30B during COVID—spending later rebounded and continued its upward trajectory. 
+							Overall, results suggest that household investment in education is resilient, economically significant, and central to national development. However, the study was limited by national-level data, linear recovery assumptions, and lack of variables like inflation or regional differences. 
+							Future research should incorporate more granular data, additional economic indicators, and multivariate forecasting models. Policymakers are encouraged to use these findings to strengthen support systems, 
+							develop crisis-resistant education policies, and expand access to learning resources to sustain growth and improve national outcomes.</p>
 					</header>
-					<!-- Discussion and Conclusion -->
+
+					<!-- Discussion and Conclusion
 					<div  style="margin: 2rem 0;">
 						<article class="box style2">
 							<h3 class = "modeling-title"><a href="discussion.html">Discussion and Conclusion</a></h3>
 							<p>
-								Insert short description
+								A concise synthesis of long-term education spending trends in the Philippines, its link to sector productivity, and the impact of major crises.
 							</p>
 						</article>
-					</div>
+					</div> -->
 
-					<!-- Web Portfolio Story -->
+				<p class="click-more">click box to see more</p>
+					<article class="box style2">
+						<div class="blur-area"> <!-- Only this will blur -->
+							<h3 class="dataset-title">Discussion and Conclusion</h3>
+							<a href="discussion.html" class="box-click"></a> <!-- FULL CLICKABLE LAYER -->
+							<p>
+								A concise synthesis of long-term education spending trends in the Philippines, its link to sector productivity, and the impact of major crises.
+							</p>
+						</div>
+						<div>
+							<span class="hover-text"><a>click for more</span><a href="discussion.html"></a>
+						</div>
+					</article>
+
+					<h3>Call to Action</h3>
+						<p>
+							Given these insights, policymakers, educational institutions, and economic planners should continue strengthening support for households—especially during crises—to maintain the upward trajectory of educational investment. Stakeholders are encouraged to use this data to guide targeted subsidies, expand digital learning access, and develop crisis-proof education policies. Ultimately, sustained and well-supported household spending in education will help secure long-term economic stability and improve the nation's overall learning outcomes.
+						</p>
+
+
+					<!-- Web Portfolio Story
 					<div  style="margin: 2rem 0;">
 						<article class="box style2">
 							<h3 class = "modeling-title"><a href="portfolio.html">Web Portfolio Story</a></h3>
@@ -243,14 +515,7 @@
 								Insert short description
 							</p>
 						</article>
-					</div>
-					
-					<footer>
-						<p>Want to learn more? Take a look at our source codes.</p>
-						<a href="https://github.com/DelgadoDoan/cs-132-group-4.git" class="button large scrolly">Github Repo</a><br>
-						<a href="https://delgadodoan.github.io/cs-132-group-4/" class="button large scrolly">Project Page</a>
-					</footer>
-				</div>
+					</div> -->
 			</article>
 		
 		<!-- Team -->
@@ -264,7 +529,7 @@
 			<div style="display:flex; justify-content:center;">
 				<div class="container" style="margin: 0 0.2rem">
 					<div class="col-6 col-6-medium col-12-small">
-						<article class="box style2">
+						<article class="box style1">
 							<img style="width:12em; height:12em; border-radius:50%; margin: 1em;" src="images/aine.jpg" /></a>
 							<h3 class = "team-title">Lorraine Castrillon</h3>
 							<p>lmcastrillon@up.edu.ph</p>
@@ -280,7 +545,7 @@
 				</div>
 				<div class="container" style="margin: 0 0.2rem">
 					<div class="col-6 col-6-medium col-12-small">
-						<article class="box style2">
+						<article class="box style1">
 							<img style="width:12em; height:12em; border-radius:50%; margin: 1em;" src="images/doan.png" /></a>
 							<h3 class = "team-title">Doan Delgado</h3>
 							<p>dgdelgado@up.edu.ph</p>
@@ -298,7 +563,7 @@
 				</div>
 				<div class="container" style="margin: 0 0.2rem">
 					<div class="col-6 col-6-medium col-12-small">
-						<article class="box style2">
+						<article class="box style1">
 							<img style="width:12em; height:12em; border-radius:50%; margin: 1em;" src="images/vitro.jpg" /></a>
 							<h3 class = "team-title">Vincent Enrique</h3>
 							<p>vaenrique@up.edu.ph</p>
@@ -336,6 +601,13 @@
 			<footer>
 				<h3><a href="https://docs.google.com/document/d/1zw2A3iBTjWp670MckYVVt_fqUneeXl5B88al4BZnJ8s/edit?usp=sharing"> Google Docs Link (click here) </a></h3>
 			</footer>
+				
+			<footer>
+				<p><i>Want to learn more? Take a look at our source codes.</i></p>
+				<a href="https://github.com/DelgadoDoan/cs-132-group-4.git" class="button large scrolly">Github Repo</a><br>
+				<!-- <a href="https://delgadodoan.github.io/cs-132-group-4/" class="button large scrolly">Project Page</a> -->
+			</footer>
+
 		</article>
 		
 
